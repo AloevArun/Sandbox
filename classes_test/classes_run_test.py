@@ -20,7 +20,7 @@ def create_zarinchka():
     print(zarinchka.get_name(), zarinchka.get_second_name(), ': Хьюстон ПШШШШШШ!!!', sep='')
 
 
-a = {'name': 'Арун', 'second_name': 'Алоев', 'sensitivity': 4}
+a = {'name': 'арун', 'second_name': 'АЛОЕВ', 'sensitivity': 4}
 
 create_zarinchka()
 create_new_human(**a)

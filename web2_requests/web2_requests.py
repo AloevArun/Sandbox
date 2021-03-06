@@ -1,9 +1,12 @@
-import web2_requests
 import json
 import socket
 
+import web2_requests
+
 
 class UserData:
+    """Класс пользовательских данных(логин, пароль, IP, порт)"""
+
     def __init__(self):
         self.ports = dict(web1=80, web2=8085, auto_rest=8091, rest_ip='127.0.0.1')
         self.current_ip = socket.gethostbyname(socket.gethostname())
@@ -19,6 +22,7 @@ class UserData:
 
 
 class Web2Request(UserData):
+    """Класс запросов на объект 'Веб-Сервер 2.0'"""
     def get_all_objects_on_server(self, auth, host):
         self.url = f'http://{host}/web2/secure/configuration'
         payload = {}
@@ -32,6 +36,7 @@ class Web2Request(UserData):
 
 
 def set_xyz(self):
+    """Класс координат для камеры"""
     x = str(140)  # str(input('X:'))
     y = str(-100)  # str(input('Y:'))
     z = str(50)  # str(input('Zoom:'))

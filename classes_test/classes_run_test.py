@@ -1,4 +1,4 @@
-from classes_test import class_test
+import class_test
 
 
 def create_new_human(name='', second_name='', sensitivity=3):

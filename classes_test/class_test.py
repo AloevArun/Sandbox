@@ -6,6 +6,9 @@ class Human:
     def __init__(self):
         print('Создан новый человек.')
 
+    def __del__(self):
+        print("Объект удален. Память очищена.")
+
     def set_name(self, name):
         self.name = str(name).title()
 

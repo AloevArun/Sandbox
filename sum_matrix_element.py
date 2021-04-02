@@ -21,7 +21,9 @@ while i < len(f_matrix):  # цикл пока не достигнем конца
     new_s_string = []  # объявляем новую вспомогательную строку
     j = 0  # обнуляем счетчик столбца в строке (j-тый столбец)
     while j < len(f_matrix[i]):  # цикл до конца элементов i-го списка
-        sum_i_j = int(int(f_matrix[i-1][j])+int(f_matrix[i][j-1])+int(f_matrix[(i+1) % len(f_matrix)][j])+int(f_matrix[i][(j+1) % len(f_matrix[i])]))
+        sum_i_j = int(
+            int(f_matrix[i - 1][j]) + int(f_matrix[i][j - 1]) + int(f_matrix[(i + 1) % len(f_matrix)][j]) + int(
+                f_matrix[i][(j + 1) % len(f_matrix[i])]))
         #  ^суммируем элементы (i-1, j), (i, j-1), (i+1, j) и (i, j+1)
         #  иная запись для избежания выхода за границы матрицы
         new_s_string.append(sum_i_j)  # добавляем сумму во вспомогательный список
@@ -39,4 +41,3 @@ while i < len(second_matrix):  # цикл до последнего элемен
         j += 1  # обновляем счетчик индекса элемента в столбце
     print('')  # Перевод вывода на новую строку
     i += 1  # обновляем счетчик индекса столбца
-

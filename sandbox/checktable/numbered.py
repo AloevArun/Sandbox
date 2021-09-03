@@ -9,4 +9,4 @@ def numbered(x):
         print(row)
 
 
-numbered(9999)
+numbered(999)
